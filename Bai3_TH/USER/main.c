@@ -72,11 +72,10 @@ void gpio_Init(void){
 	GPIO_Structure.GPIO_Mode = GPIO_Mode_IPU;
 	GPIO_Structure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA,&GPIO_Structure);	
-	
-	
 }
 
 void Display(void *p){
+	gpio_Init();
 	uint8_t button_state_ok = 1 ;
 	uint8_t last_button_state_1 ;
 	while(1){
